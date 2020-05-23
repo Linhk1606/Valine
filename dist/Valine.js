@@ -1928,7 +1928,7 @@
                 i && !/ja/.test(e.config.lang) && (i = y.default.detect(i),
                 a = '<span class="vsys">'+
                 (
-                    i.browser ?
+                    (i.browser && i.browser != "Unknow App") ?
                     (
                     '<i class="fab fa-' + 
                         ( ["xiaomi","wechat","kindle"].includes(i.browser.toLowerCase()) ? "mobile-alt fas" : 
