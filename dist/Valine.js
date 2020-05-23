@@ -1926,7 +1926,30 @@
                   , i = t.get("ua")
                   , a = "";
                 i && !/ja/.test(e.config.lang) && (i = y.default.detect(i),
-                a = '<span class="vsys"><i class="fab fa-' + ( ["xiaomi","wechat","kindle"].includes(i.browser.toLowerCase()) ? "mobile-alt fas" : ( ["chrome","chromium"].includes(i.browser.toLowerCase()) ? "chrome" : ( ["ie"].includes(i.browser.toLowerCase()) ? "internet-explorer" : i.browser.toLowerCase() ) ) ) + '"></i>  ' + i.browser + " " + i.version + '</span> <span class="vsys"><i class="fab fa-' + (["macos", "ios"].includes(i.os.toLowerCase()) ? "apple" : i.os.toLowerCase()) + '"></i>  ' + i.os + " " + i.osVersion + "</span>",
+                a = '<span class="vsys">'+
+                (
+                    i.browser && i.browser.name ?
+                    (
+                    '<i class="fab fa-' + 
+                        ( ["xiaomi","wechat","kindle"].includes(i.browser.toLowerCase()) ? "mobile-alt fas" : 
+                            ( ["chrome","chromium"].includes(i.browser.toLowerCase()) ? "chrome" : 
+                                ( ["ie"].includes(i.browser.toLowerCase()) ? "internet-explorer" : i.browser.toLowerCase() )
+                            )
+                        )
+                    + '"></i>  ' + i.browser + " " + i.version
+                    ) :
+                    '<i class="fas fa-alien"></i> Strange Browser'
+                )
+                + '</span> <span class="vsys">'+
+                (
+                    i.os && i.os.name ?
+                    (
+                        '<i class="fab fa-'
+                        + (["macos", "ios"].includes(i.os.toLowerCase()) ? "apple" : i.os.toLowerCase()) + '"></i>  ' + i.os + " " + i.osVersion
+                    ) :
+                    '<i class="fas fa-ufo-beam"></i> Strange OS'
+                )
+                + "</span>",
                 "*" === e.config.path && (a = '<a href="' + t.get("url") + '" class="vsys">' + t.get("url") + "</a>"));
                 var ism = e.config.master.includes((0,
                 s.default)(t.get("mail")))
