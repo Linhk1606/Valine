@@ -1928,7 +1928,7 @@
                 i && !/ja/.test(e.config.lang) && (i = y.default.detect(i),
                 a = '<span class="vsys">'+
                 (
-                    i.browser && i.browser.name ?
+                    i.browser ?
                     (
                     '<i class="fab fa-' + 
                         ( ["xiaomi","wechat","kindle"].includes(i.browser.toLowerCase()) ? "mobile-alt fas" : 
@@ -1942,7 +1942,7 @@
                 )
                 + '</span> <span class="vsys">'+
                 (
-                    i.os && i.os.name ?
+                    i.os ?
                     (
                         '<i class="fab fa-'
                         + (["macos", "ios"].includes(i.os.toLowerCase()) ? "apple" : i.os.toLowerCase()) + '"></i>  ' + i.os + " " + i.osVersion
