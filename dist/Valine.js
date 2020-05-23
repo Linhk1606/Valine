@@ -1926,8 +1926,8 @@
                   , i = t.get("ua")
                   , a = "";
                 i && !/ja/.test(e.config.lang) && (i = y.default.detect(i),
-                a = '<span class="vsys"><i class="fab fa-' + ( ["xiaomi"].includes(i.browser.toLowerCase()) || ["wechat"].includes(i.browser.toLowerCase()) || ["kindle"].includes(i.browser.toLowerCase()) ) ? "mobile-alt fas" : i.browser.toLowerCase()) + '"></i>' + i.browser + " " + i.version + '</span> <span class="vsys"><i class="fab fa-' + (["macos", "ios"].includes(i.os.toLowerCase()) ? "apple" : i.os.toLowerCase()) + '"></i>' + i.os + " " + i.osVersion + "</span>",
-                "*" === e.config.path && (a = '<a href="' + t.get("url") + '" class="vsys">' + t.get("url") + "</a>");
+                a = '<span class="vsys"><i class="fab fa-' + ( ["xiaomi"].includes(i.browser.toLowerCase()) || ["wechat"].includes(i.browser.toLowerCase()) || ["kindle"].includes(i.browser.toLowerCase()) ? "mobile-alt fas" : i.browser.toLowerCase() ) + '"></i>  ' + i.browser + "  " + i.version + '</span> <span class="vsys"><i class="fab fa-' + (["macos", "ios"].includes(i.os.toLowerCase()) ? "apple" : i.os.toLowerCase()) + '"></i>' + i.os + " " + i.osVersion + "</span>",
+                "*" === e.config.path && (a = '<a href="' + t.get("url") + '" class="vsys">' + t.get("url") + "</a>"));
                 var ism = e.config.master.includes((0,
                 s.default)(t.get("mail")))
                   , isf = e.config.friends.includes((0,
