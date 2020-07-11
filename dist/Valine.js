@@ -2593,7 +2593,7 @@
                 BlackBerry: -1 < e.indexOf("BlackBerry") || -1 < e.indexOf("RIM") || -1 < e.indexOf("BB10"),
                 MeeGo: -1 < e.indexOf("MeeGo"),
                 Symbian: -1 < e.indexOf("Symbian"),
-                iPhoneOS: -1 < e.indexOf("like Mac OS X"),
+                iOS: -1 < e.indexOf("like Mac OS X"),
                 "Chrome OS": -1 < e.indexOf("CrOS"),
                 WebOS: -1 < e.indexOf("hpwOS"),
                 Mobile: -1 < e.indexOf("Mobi") || -1 < e.indexOf("iPh") || -1 < e.indexOf("480"),
